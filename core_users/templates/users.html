@@ -1,0 +1,22 @@
+{% extends 'main.html' %}
+    {% block content %}
+    <h1 align=center>User details</h1>
+        <table align=center>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>User Name</th>
+                <th>Email</th>
+            </tr>
+            {% for user in users %}
+                <tr>
+                    <td>{{user.first_name}}</td>
+                    <td>{{user.last_name}}</td>
+                    <td>{{user.username}}</td>
+                    <td>{{user.email}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% endblock %}
+
+
